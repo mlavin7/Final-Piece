@@ -13,8 +13,8 @@ export const routes = [
     },
 
     {
-        path: "/dashboard",
-        component: () => import("./pages/Dashboard.vue"),
+        path: "/menu1",
+        component: () => import("./pages/MenuOne.vue"),
         meta: { requiresAuth: true },
     },
 ];
