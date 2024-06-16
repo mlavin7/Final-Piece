@@ -1,4 +1,6 @@
 <script setup>
+import { ref } from 'vue';
+import SelectButtonsHomepage from '../components/selelctButtonsHomepage.vue';   
 const changeLanguage = (lang) => {
    console.log(lang);
 };
@@ -16,21 +18,8 @@ const changeLanguage = (lang) => {
       </div>
 
       <div class="menu">
-         
-         <div class="options">
-            <button class="optionButton">
-               <p>Emergency Numbers</p><img src="" alt="">
-            </button>
-            <button class="optionButton">
-               <p>medical crisis</p><img src="" alt="">
-            </button>
-            <button class="optionButton">
-               <p>Mental cryis</p><img src="" alt="">
-            </button>
-            <button class="optionButton">
-               <p>Save haven</p><img src="" alt="">
-            </button>
-         </div>
+         <SelectButtonsHomepage />
+        
       </div>
    </body>
 
@@ -54,40 +43,6 @@ const changeLanguage = (lang) => {
       background-color: black;
    }
 
-   .menu{
-      display: flex;
-      justify-content: center;
-      align-content: center;
-      align-items: center;
-      height: 40vh;
-      width: 750px;}
-
-   .optionButton {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100px;
-      width: 100px;
-      background-color: yellow;
-      
-   
-   }
-
-   .options {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      justify-content: center;
-      align-content: center;
-      gap: 20px;
-      align-items: center;
-      height: 100%;
-      width: 100vw;
-      background-color: black;
-      color: white;
-      font-size: 20px;
-      font-family: 'Arial';
-   }
 
    .optionButton {
       display: flex;
@@ -99,21 +54,8 @@ const changeLanguage = (lang) => {
       background-color: yellow;
       color: black;
       font-size: 20px;
-      font-family: 'Arial';
-      border: 7px solid black;
-      border-radius: 10px;
-      cursor: pointer;
-      grid-area: auto;
+    
    }
-
-   .optionButton:nth-child(1),.optionButton:nth-child(2) {
-      grid-row: 1;
-   }
-
-   .optionButton:nth-child(3),.optionButton:nth-child(4) {
-      grid-row: 2;
-   }
-
    .languageButton {
       display: flex;
       justify-content: center;
