@@ -1,31 +1,31 @@
 <script setup>
 import { ref } from 'vue';
-import SelectButtonsHomepage from '../components/selelctButtonsHomepage.vue';   
-const changeLanguage = (lang) => {
-   console.log(lang);
-};
+import SelectButtonsHomepage from '../components/selelctButtonsHomepage.vue'; 
+import PanicButton from '../components/PanicButton.vue';  
+import Header from '../components/Header.vue';
+
+
 </script>
 <template>
 
 
    <body>
 
-      <div class="languageButton ">
-         <button class="langButton" @click="changeLanguage('en')">EN</button>
-         <button class="langButton" @click="changeLanguage('de')">GE</button>
-         <button class="langButton" @click="changeLanguage('fr')">FR</button>
-         <button class="langButton" @click="changeLanguage('it')">IT</button>
-      </div>
+  
 
       <div class="menu">
          <SelectButtonsHomepage />
         
       </div>
+      <div class="panicContainer">
+         <PanicButton />
+      </div>
+      
    </body>
 
 </template>
 <style scoped>
-   * {
+   /* * {
       box-sizing: border-box;
       margin: 0px;
       border: 0px;
@@ -71,7 +71,7 @@ const changeLanguage = (lang) => {
    .langButton {
       display: flex;
       background-color: plum;
-      /* Green */
+      /* Green 
       border: none;
       color: white;
       padding: 15px 15px;
@@ -88,6 +88,6 @@ const changeLanguage = (lang) => {
 
    .langButton:hover {
       background-color: pink ;
-   }
+   } */
 
 </style>
