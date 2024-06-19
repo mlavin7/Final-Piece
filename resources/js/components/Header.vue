@@ -23,7 +23,7 @@ const translate = (text) => {
             'Medical Crisis': 'Medizinische Krise',
             'Panic Button': 'Panikknopf',
             'Safe Heaven': 'Sicherer Himmel',
-            'Back': 'Zurück'    
+            'Back': 'Zurück'
         },
         'fr': {
             'Emergency Numbers': "Numéros d\'urgence_",
@@ -39,7 +39,7 @@ const translate = (text) => {
             'Medical Crisis': 'Crisi medica',
             'Panic Button': 'Bottone di panico',
             'Safe Heaven': 'Rifugio sicuro',
-            'Back': 'Indietro'        
+            'Back': 'Indietro'
         }
     };
 
@@ -58,27 +58,32 @@ const translate = (text) => {
             <button class="langButton" @click="changeLanguage('fr')">FR</button>
             <button class="langButton" @click="changeLanguage('it')">IT</button>
         </div>
+
         <div v-if="Emergencies && lang == 'en'" class="HeaderGeneral">
-        
-        <div class="backButtonContainer">
-            <button class="backButton">{{ translate('Back') }}</button>
-        </div>
-        <div v-if="Emergency" class="HeaderTitle">
-            <h1>{{ translate('Emergency Numbers') }}</h1>
-        </div>
 
-        <div v-if="mental" class="HeaderTitle">
-            <h1>{{ translate('Mental Crisis') }}</h1>
-        </div>
 
-        <div v-if="hospital" class="HeaderTitle">$
-            <h1>{{ translate('Medical Crisis') }}</h1>
-        </div>
-        <div v-if="haven" class="HeaderTitle">
-            <h1>{{ translate('Safe Heaven') }}</h1>
-        </div>
+            <div class="backButtonContainer">
+                <router-link :to="{ name: 'start', }">
+                    <button class="backButton">{{ translate('Back') }}</button>
+                </router-link>
+            </div>
 
-          
+            <div v-if="emergency" class="HeaderTitle">
+                <h1>{{ translate('Emergency Numbers') }}</h1>
+            </div>
+
+            <div v-if="mental" class="HeaderTitle">
+                <h1>{{ translate('Mental Crisis') }}</h1>
+            </div>
+
+            <div v-if="hospital" class="HeaderTitle">$
+                <h1>{{ translate('Medical Crisis') }}</h1>
+            </div>
+            <div v-if="haven" class="HeaderTitle">
+                <h1>{{ translate('Safe Heaven') }}</h1>
+            </div>
+
+
         </div>
 
 
@@ -89,7 +94,7 @@ const translate = (text) => {
 
 
 
-    
+
 </template>
 
 

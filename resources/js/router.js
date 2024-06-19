@@ -4,19 +4,46 @@
 export const routes = [
     {
         path: "/",
+        name: "start",
         component: () => import("./pages/Home.vue"),
+        meta : { start: true, },
     },
     
     {
-        path: "/login",
-        component: () => import("./pages/Auth/Login.vue"),
+        path: "/mental",
+        name: "mental",
+        component: () => import("./pages/Mental.vue"),
+        meta: { mental: true,},
     },
 
     {
-        path: "/menu1",
-        component: () => import("./pages/MenuOne.vue"),
-        meta: { requiresAuth: true },
+        path: "/hospital",
+        name: "hospital",
+        component: () => import("./pages/Hospital.vue"),
+        meta: {hospital:true,   },
     },
+
+    {
+        path:"/Haven",
+        name: "haven",
+        component: () => import("./pages/Haven.vue"),
+        meta:{ haven:true, }
+    },
+
+    {
+        path:"/emergency",
+        name: "emergency",
+        component: () => import("./pages/Emergency.vue"),
+        meta:{ emergency:true, }
+    },
+
+    {
+        path:"/panic",
+        name: "panic",
+        component: () => import("./pages/Panic.vue"),
+        meta:{ panic:true, }
+    }
+
 ];
 
 
