@@ -4,7 +4,9 @@ import vue from "@vitejs/plugin-vue";
 
 export default defineConfig({
     plugins: [
-        vue(),
+        vue({
+            reactivityTransform: true,
+          }),
         laravel({
             input: ["resources/css/app.css", "resources/js/app.js"],
             refresh: true,

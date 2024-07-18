@@ -1,0 +1,162 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    border: 0px;
+   
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    width: 375px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    justify-self: center;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;}
+
+ 
+.headerTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 10px;
+    width: 375px;
+    height: 20vh;
+   
+}
+.backButton {
+    height: 50px;
+    width: 100px;
+    background-color: yellow;
+    color: black;
+    font-size: large;
+    border-radius: 10%;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+.pageTitle {
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 20px;
+    color: white;
+}
+/* hospiptal list  */
+h1 {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    height: 20px;
+}
+li a{
+    text-decoration: none;
+    color: black;
+    font-size: medium;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    height: 20px;
+    
+}
+
+.mapList li {
+    width: 370px;
+    border-right: solid black 2px;
+    border-left: solid black 2px;
+    border-bottom: solid black 2px;
+    background-color: turquoise;
+}
+
+.buttonsTittle{
+    
+    background-color: white;
+    color: black;
+    font-size: 30px;
+    font-weight: 600;
+    height: 50px;
+    width: 370px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+ 
+
+}
+.phonesList {
+    display: none;
+    width: 370px;
+    height:100%;
+  
+}
+
+.mapList {
+    display: none;
+    width: 370px;
+    height:100%;
+    
+}
+.phonesList li {
+    width: 370px;
+    border-right: solid black 2px;
+    border-left: solid black 2px;
+    border-bottom: solid rgb(84, 18, 18) 2px;
+    background-color: yellow;
+    text-decoration: none;
+}
+
+/* hospital list buttons  */
+
+.phoneMap ul {
+    width: 370px;
+    height: 50vh;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+    ;
+}
+
+.buttonMap {
+    width: 185px;
+   height: 60px;
+    border-top: solid black 2px;
+    border-right: solid black 2px;
+    border-left: solid black 1px;
+    background-color: turquoise;
+    color: black;
+    font-size: medium;
+}
+.buttonPhone {
+    width: 185px;
+    height: 60px;
+    border-top: solid black 2px;
+    border-right: solid black 1px;
+    border-left: solid black 2px;
+    background-color: yellow;
+    color: black;
+}
+
+.listButtonMap {
+    width: 375px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+}

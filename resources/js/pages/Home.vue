@@ -1,16 +1,20 @@
 <script setup>
-import { ref } from 'vue';
+
+import LanguageSwitcher from '../components/LanguageSwitcher.vue';
 import SelectButtonsHomepage from '../components/selelctButtonsHomepage.vue';
 import PanicButton from '../components/PanicButton.vue';
-import Header from '../components/Header.vue';
 
 
 </script>
 <template>
-   <body>
-      <div class="header">
-         <Header />
-      </div>
+   
+
+
+   
+
+      <div class="switcher">
+         <LanguageSwitcher />
+         </div>
       <div class="menu">
          <SelectButtonsHomepage />
       </div>
@@ -18,9 +22,21 @@ import Header from '../components/Header.vue';
          <PanicButton />
       </div>
 
-   </body>
+   
 
 </template>
+
+<style scoped>
+@import "../../css/app.css";
+
+
+
+
+
+</style>
+
+
+
 <!-- <style scoped>
 * {
       box-sizing: border-box;

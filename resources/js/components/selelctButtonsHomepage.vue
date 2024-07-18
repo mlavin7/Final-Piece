@@ -1,19 +1,23 @@
 <script setup>
-import { ref } from 'vue';
 
+import { RouterLink } from 'vue-router';
+import { useI18n } from 'vue-i18n';
+
+
+const { t } = useI18n();
 </script>
 
 <template>
    <div class="optionsRightContainer">
       <router-link :to="{ name: 'emergency', }">
          <button class="optionButton">
-            <p>Emergency</p>
+            <p>{{ t('Emergency Numbers') }}</p>
             <img src="../../ImgStore/emergency.svg" alt="Emergency">
          </button>
       </router-link>
       <router-link :to="{ name: 'hospital', }">
          <button class="optionButton">
-            <p>Medical Crisis</p>
+            <p>{{t('Medical Crisis')}}</p>
             <img src="../../ImgStore/medical.svg" alt="Medical Crisis">
          </button>
       </router-link>
@@ -23,24 +27,24 @@ import { ref } from 'vue';
    <div class="optionsLeftContainer">
       <router-link :to="{ name: 'mental', }">
          <button class="optionButton">
-            <p>Mental crisis</p>
+            <p>{{t('Mental Crisis')}}</p>
             <img src="../../ImgStore/Mental.svg" alt="Mental Crisis">
          </button>
       </router-link>
       <router-link :to="{ name: 'haven', }">
          <button class="optionButton">
-            <p>Save haven</p><img src="../../ImgStore/save haven.svg" alt="Save Haven">
+            <p>{{t('Safe Heaven')}}</p><img src="../../ImgStore/save haven.svg" alt="Save Haven">
          </button>
       </router-link>
    </div>
 </template>
 
-<!-- <style scoped>
-* {
-   box-sizing: border-box;
-   margin: 0px;
-   border: 0px;
-   padding: 0px;
+<style scoped>
+
+a{
+   text-decoration: none;
+   color: black;
+
 }
 
 .options {
@@ -49,7 +53,7 @@ import { ref } from 'vue';
    align-content: center;
    align-items: center;
    height: 40vh;
-   width: 750px;
+ 
 }
 
 .optionButton {
@@ -57,8 +61,32 @@ import { ref } from 'vue';
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   height: 100px;
-   width: 100px;
+   height: 170px;
+   width: 170px;
    background-color: yellow;
+   border-radius: 10px;
+   text-decoration: none;
+   color: black;
+   font-size: larger;
+   font-weight: bolder;
 }
-</style> -->
+.optionsRightContainer {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   gap:10px;
+   margin-bottom: 10px;
+
+ 
+}
+.optionsLeftContainer {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   gap:10px
+  
+   
+}
+</style>
