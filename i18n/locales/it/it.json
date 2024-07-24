@@ -12,5 +12,10 @@
     "Telephone": "Telefono",
     "Map": "Mappa",
     "Close Facilities": "Chiudi strutture",
-    "PANIC!": "PANICO!"
+    "PANIC!": "PANICO!",
+    "PRESS FOR 3 SECOND TO ACTIVATE": "PREMI PER 3 SECONDI PER ATTIVARE",
+    "Ambulance: 144": "Ambulanza: 144",
+    "Police: 117": "Polizia: 117",
+    "Fire service: 118": "Vigili del fuoco: 118",
+    "Tox-Center: 145" : "Centro di tossicologia: 145"
 }

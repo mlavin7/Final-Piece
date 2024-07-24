@@ -11,20 +11,20 @@ const t = i18next.t.bind(i18next);
 
 
 <template>
-    
-       
-    
+
+
+
 
     <body>
-        <router-link :to="{ name: 'start' }">
-            <button class="backButton">{{ $t('Back') }}</button>
-        </router-link>
-        <div class="headerTitle">
-            <h1>{{ $t('Mental Crisis') }}</h1>
+        <div  class="header">
+            <router-link :to="{ name: 'start' }">
+                <button class="backButton">{{ $t("Back") }}</button>
+            </router-link>
+            <h1 class="title">{{ $t('Mental Crisis') }}</h1>
         </div>
-        
-            <Mental/>
-        
+
+        <Mental />
+
         <PanicButton />
     </body>
 </template>
@@ -33,7 +33,6 @@ const t = i18next.t.bind(i18next);
 
 
 <style scoped>
-
 @import "../../css/app.css";
 
 ul {
@@ -42,10 +41,9 @@ ul {
     width: 320px;
     ;
 }
+
 h1 {
     color: white;
     width: 320px;
 }
-
-
 </style>

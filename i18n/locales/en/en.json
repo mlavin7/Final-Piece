@@ -10,5 +10,10 @@
     "Telephone": "Telephone",
     "Map": "Map",
     "Close Facilities": "Close Facilities",
-    "PANIC!": "PANIC!"
-}
+    "PANIC!": "PANIC!",
+    "PRESS FOR 3 SECOND TO ACTIVATE": "PRESS FOR 3 SECOND TO ACTIVATE",
+    "Ambulance: 144": "Ambulance: 144",
+    "Police: 117": "Police: 117",
+    "Fire service: 118": "Fire service: 118",
+    "Tox-Center: 145" : "Tox-Center: 145"
+} 

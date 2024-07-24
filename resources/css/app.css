@@ -3,7 +3,6 @@
     padding: 0px;
     box-sizing: border-box;
     border: 0px;
-   
 }
 
 body {
@@ -12,39 +11,43 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-content: center;
     justify-self: center;
+    align-items: center;
 }
 
-.title {
-    font-size: 20px;
-    font-weight: 600;
-    color: white;}
-
- 
-.headerTitle {
+.header {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-items: center;
     justify-content: space-between;
-    border: 10px;
-    width: 375px;
-    height: 20vh;
-   
+    margin-top: 20px;
+    width: 365px;
+    position: relative;
+    margin-bottom: 20px;
+
 }
+
+.header .title {
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+}
+
 .backButton {
     height: 50px;
     width: 100px;
     background-color: yellow;
     color: black;
     font-size: large;
-    border-radius: 10%;
+    border-radius: 10px;
     font-weight: 600;
-    margin-left: 20px;
 }
 
 .pageTitle {
-    font-size: 20px;
+    font-size: px;
     font-weight: 600;
     margin-left: 20px;
     color: white;
@@ -57,35 +60,31 @@ h1 {
     text-align: center;
     height: 20px;
 }
-li a{
-    text-decoration: none;
-    color: black;
-    font-size: medium;
-    
+
+.mapList li a {
     display: flex;
     flex-direction: row;
+    align-content: center;
+    justify-content: center;
     align-items: center;
-    justify-items: center;
-    height: 20px;
-    
-}
-
-.mapList li {
-    width: 370px;
-    border-right: solid black 2px;
-    border-left: solid black 2px;
-    border-bottom: solid black 2px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    width: 365px;
+    height: 42px;
+    border-right: solid black 1px;
+    border-left: solid black 1px;
+    border-bottom: solid black 1px;
     background-color: turquoise;
 }
 
-.buttonsTittle{
-    
+.buttonsTittle {
     background-color: white;
     color: black;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 600;
     height: 50px;
-    width: 370px;
+    width: 365px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     text-align: center;
@@ -93,70 +92,116 @@ li a{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    
- 
-
+    border: solid black 1px;
 }
+
 .phonesList {
     display: none;
-    width: 370px;
-    height:100%;
-  
+    width: 365px;
+    height: 100%;
 }
 
 .mapList {
     display: none;
-    width: 370px;
-    height:100%;
-    
+    width: 365px;
+    height: 100%;
 }
-.phonesList li {
-    width: 370px;
-    border-right: solid black 2px;
-    border-left: solid black 2px;
+
+.phonesList li a {
+    width: 365px;
+    height: 42px;
+    border-right: solid black 1px;
+    border-left: solid black 1px;
     border-bottom: solid rgb(84, 18, 18) 2px;
     background-color: yellow;
     text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
-
 /* hospital list buttons  */
 
 .phoneMap ul {
-    width: 370px;
-    height: 50vh;
+    width: 365px;
+    height: 40vh;
     display: none;
     flex-direction: row;
     justify-content: center;
     align-items: end;
-    ;
 }
 
 .buttonMap {
-    width: 185px;
-   height: 60px;
-    border-top: solid black 2px;
-    border-right: solid black 2px;
-    border-left: solid black 1px;
+    width: 182.5px;
+    height: 60px;
+    border: 1px solid black;
     background-color: turquoise;
     color: black;
     font-size: medium;
+    font-size: 30;
+    font-weight: 800;
 }
 .buttonPhone {
-    width: 185px;
+    width: 182.5px;
     height: 60px;
-    border-top: solid black 2px;
-    border-right: solid black 1px;
-    border-left: solid black 2px;
+   border: 1px solid black;
     background-color: yellow;
     color: black;
+    font-size: 30;
+    font-weight: 800;
+}
+
+.buttonPhone p {
+    color: black;
+    font-family: "Nunito", sans-serif;
+    font-size: 20px;
+}
+
+.buttonMap {
+    color: black;
+    font-family: "Nunito", sans-serif;
+    font-size: 20px;
 }
 
 .listButtonMap {
     width: 375px;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
     justify-items: center;
     align-items: center;
+   
+}
+
+.headerTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    height: 50px;
+    font-size: 25px;
+    font-weight: 800;
+    margin: 7.5px;
+    height: 20vh;
+    width: 360px;
+}
+
+.hospitals{
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 10px; 
+
+}
+
+.li6 a{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; 
 }

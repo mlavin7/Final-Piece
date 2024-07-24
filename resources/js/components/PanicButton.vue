@@ -69,7 +69,7 @@ export default {
     <button @touchstart="startPress()" @touchend="stopPress()" @touchcancel="stopPress()" @click="startPress()"
       class="panic-button" :class="{ active: pressing }">
       <span v-if="!showPopup"> {{ $t('PANIC!') }} <br>
-      <P>PRESS FOR 3 SECOND TO ACTIVATE</P> 
+      <P style="font-size: large;" >{{ $t("PRESS FOR 3 SECOND TO ACTIVATE") }}</P> 
 
 
       </span>
@@ -97,7 +97,8 @@ export default {
 .panic-button-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+align-items: center;
+  height: 100%;
 }
 
 .panic-button {
@@ -106,18 +107,20 @@ export default {
   cursor: pointer;
   color: white;
   background-color: #ff0000;
-  height: 30vh;
+  height: 90%;
   width: 360px;
   border-radius: 10px;
   font-size: 50px;
   font-weight: bold;
-  ;
+  
 }
 
 .panic-button.active {
   animation: blink 1s linear infinite;
   
 }
+
+
 
 .popup {
   visibility: hidden;

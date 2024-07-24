@@ -35,26 +35,27 @@ const showMap = async () => {
 
 <template>
 
+    <div class="hospitals">
     <div div class="listButtonMap">
 
     <div class="phoneMap">
 
-
-        <button class="buttonPhone" @click="showPhones()">
-            {{ t('Telephone') }}
+<h2 class="buttonsTittle">{{ t("Close Facilities") }}</h2>
+        <button class="buttonPhone" @click="showPhones()"><p>
+            {{ t('Telephone') }}</p>
             <!-- on click show phone list -->
         </button>
 
 
         <button class="buttonMap" @click="showMap()">
             <!-- on click show map list -->
-            {{ t('Map') }} </button>
+           <p>{{ t('Map') }}</p>  </button>
 
     </div>
 
-
+    
     <!--     v-if asociuated tioa a bottob givinn a value -->
-    <ul class="phonesList" id="phoneList">
+    <ul class="phonesList" id="phoneList" style="display:block">
         <li class="li1"><a href="tel:+41 44 255 11 12">University Hospital Zurich</a></li>
         <!-- last nuber is modified add right number once app isn up -->
         <li class="li2"><a href="tel: +41444161112 "> Triemli City Hospital</a></li>
@@ -80,19 +81,9 @@ const showMap = async () => {
 
 
     </div>
-    
+    </div>
 </template>
 
 <style scoped>
 @import "../../css/app.css";
-
-
-
-
-
-
-
-
-
-
 </style>

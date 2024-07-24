@@ -15,7 +15,7 @@ const t = i18next.t.bind(i18next);
 
     <body>
 
- <div  class="headerTitle">
+ <div  class="header">
             <router-link :to="{ name: 'start' }">
                 <button class="backButton">{{ $t("Back") }}</button>
             </router-link>

@@ -13,7 +13,7 @@ const t = i18next.t.bind(i18next);
 
 <template>
     <header>
-        <div v-if="'haven'" class="headerTitle">
+        <div v-if="'haven'" class="header">
             <router-link :to="{ name: 'start' }">
                 <button class="backButton">{{ $t('Back') }}</button>
             </router-link>

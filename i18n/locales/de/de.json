@@ -1,16 +1,20 @@
 {
-                        "Emergency Numbers": "Notrufnummern",
-                        "Mental Crisis": "Mentale Krise",
-                        "Medical Crisis": "Medizinische Krise",
-                        "Panic Button": "Panikknopf",
-                        "Safe Heaven": "Sicherer Himmel",
-                        "Back": "Zurück",
-                        "Press Alarm":
-                            "Drücken Sie 3 Sekunden lang, um den Alarm zu aktivieren",
-                        "Mute Alarm":
-                            "Drücken Sie 3 Sekunden lang, um den Alarm stumm zu schalten",
-                        "Telephone": "Telefon",
-                        "Map": "Karte",
-                        "Close Facilities": "Schließen Einrichtungen",
-                        "PANIC!": "PANIK!"
-                    }
+    "Emergency Numbers": "Notrufnummern",
+    "Mental Crisis": "Mentale Krise",
+    "Medical Crisis": "Medizinische Krise",
+    "Panic Button": "Panikknopf",
+    "Safe Heaven": "Sicherer Himmel",
+    "Back": "Zurück",
+    "Press Alarm": "Drücken Sie 3 Sekunden lang, um den Alarm zu aktivieren",
+    "Mute Alarm": "Drücken Sie 3 Sekunden lang, um den Alarm stumm zu schalten",
+    "Telephone": "Telefon",
+    "Map": "Karte",
+    "Close Facilities": "Schließen Einrichtungen",
+    "PANIC!": "PANIK!",
+    "PRESS FOR 3 SECOND TO ACTIVATE": "DRÜCKEN SIE 3 SEKUNDEN LANG, UM ZU AKTIVIEREN",
+    "Ambulance: 144": "Ambulanz: 144",
+    "Police: 117": "Polizei: 117",
+    "Fire service: 118": "Feuerwehr: 118",
+    "Tox-Center: 145": "Tox-Zentrum: 145"
+}                       
+
