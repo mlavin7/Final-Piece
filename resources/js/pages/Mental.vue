@@ -14,6 +14,8 @@ console.log("reAD");
 
 const t = i18next.t.bind(i18next);
 
+
+
 </script>
 
 
@@ -29,7 +31,7 @@ const t = i18next.t.bind(i18next);
 
         <div   class="header">
             <router-link :to="{ name: 'start' }">
-                <button class="backButton"  onclick="localStorage.clear()">{{ $t("Back") }}</button>
+                <button class="backButton"  onclick="">{{ $t("Back") }}</button>
             </router-link>
            <h1  v-if="isAlarmActive == true" class="title">{{ $t('Panic Button') }}</h1>
             <h1 v-else class="title">{{ $t('Mental Crisis') }}</h1> 
