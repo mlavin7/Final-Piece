@@ -29,6 +29,7 @@ watchEffect(() => {
 <style scoped>
 .langContainer {
   display: flex;
+  width: 370px;;
   flex-direction: row;
   justify-content: space-between;
   margin-top: 10px;

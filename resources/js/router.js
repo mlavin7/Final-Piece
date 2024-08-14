@@ -37,12 +37,7 @@ export const routes = [
         meta:{ emergency:true, }
     },
 
-    {
-        path:"/panic",
-        name: "panic",
-        component: () => import("./pages/Panic.vue"),
-        meta:{ panic:true,}
-    }
+   
 
 ];
 

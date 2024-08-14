@@ -4,9 +4,12 @@ import { createRouter, createWebHistory } from "vue-router";
 import { createPinia } from 'pinia'
 import { createApp } from "vue";
 import { useAuthStore } from "./stores/AuthStore";
+
 import App from "./App.vue";
 import i18n from './i18n';
 
+
+import Vue3TouchEvents from "vue3-touch-events";
 
 const app = createApp(App);
 app.use(createPinia());
@@ -34,7 +37,7 @@ router.beforeEach((to, from, next) => {
     }
 });
 
-
+app.use(Vue3TouchEvents);
 app.use(router);
 app.use(i18n);
 app.mount("#app");

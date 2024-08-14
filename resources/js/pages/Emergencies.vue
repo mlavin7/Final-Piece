@@ -3,15 +3,32 @@
 import PanicButton from '../components/PanicButton.vue';
 import i18next from 'i18next';
 import { RouterLink } from 'vue-router';
+import { usePanicStore } from '../stores/PanicStore.js';
+import { storeToRefs } from 'pinia';
+
+const { isAlarmActive} = storeToRefs(usePanicStore());
+
+
+console.log("panic", isAlarmActive);
+console.log("reAD");
 
 const t = i18next.t.bind(i18next);
 </script>
 
 
 
-<template>$
+<template>
     <header>
-        <div class="header">
+        
+        <div v-if="isAlarmActive == true" class="header">
+            <router-link :to="{ name: 'start' }">
+                <button class="backButton">{{ $t('Back') }}</button>
+            </router-link>
+
+            <h1 class="title">{{ $t('Panic Button') }}</h1>
+        </div>
+
+        <div v-if="isAlarmActive == false"  class="header">
             <router-link :to="{ name: 'start' }">
                 <button class="backButton">{{ $t('Back') }}</button>
             </router-link>
@@ -23,7 +40,7 @@ const t = i18next.t.bind(i18next);
 
     <body>
 
-        <div>
+        <div v-if="isAlarmActive == false" >
             <ul>
                 <li class="buttoncont"><a class="anchor" href=" tel:1444">{{ $t("Ambulance: 144") }}</a></li>
                 <li class="buttoncont"><a class="anchor" href="tel:1177">{{ $t("Police: 117") }}</a></li>
@@ -51,7 +68,7 @@ const t = i18next.t.bind(i18next);
 
 
 li {
-    gap: 20px;
+    gap: 10px;
 }
 
 li .anchor {
@@ -70,7 +87,7 @@ li .anchor {
     text-decoration: none;
     font-size: 20px;
     font-weight: bolder;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 ul {

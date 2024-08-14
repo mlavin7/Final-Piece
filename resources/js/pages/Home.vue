@@ -1,21 +1,40 @@
 <script setup>
-
 import LanguageSwitcher from '../components/LanguageSwitcher.vue';
 import SelectButtonsHomepage from '../components/selelctButtonsHomepage.vue';
 import PanicButton from '../components/PanicButton.vue';
+import { usePanicStore } from '../stores/PanicStore.js';
+import { storeToRefs } from 'pinia';
 
+
+
+const { isAlarmActive} = storeToRefs(usePanicStore());
+
+
+console.log("panic", isAlarmActive);
+console.log("reAD");
 
 </script>
-<template>
+ <template> 
+   
+   <header>
+        <div v-if="isAlarmActive == true" class="header">
+            <router-link :to="{ path: '/'}">
+                <button  class="backButton">{{ $t('Back') }}</button>
+            </router-link>
+
+            <h1 class="title">{{ $t('Panic Button') }}</h1>
+        </div>
+
+    </header>
+
+
+
    
 
-
-   
-
-      <div class="switcher">
+      <div v-if="isAlarmActive == false" class="switcher"> 
          <LanguageSwitcher />
          </div>
-      <div class="menu">
+      <div v-if="isAlarmActive == false" class="menu">
          <SelectButtonsHomepage />
       </div>
       <div class="panicContainer">

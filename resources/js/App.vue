@@ -1,3 +1,4 @@
+
 <template>
     <router-view v-slot="{ Component, route }">
 
@@ -32,9 +33,9 @@ html {
 
 .divapp {
    height: 100vh;
+   width: 100vw ;
    display: flex;
    flex-direction: column;
-   justify-content: center;
    align-items: center;
    justify-items: center;
    align-content: center;
