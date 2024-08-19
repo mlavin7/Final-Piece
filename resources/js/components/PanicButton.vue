@@ -74,18 +74,18 @@ export default {
 
   <div v-if="showPopup" class="googleMap">
   
-    <iframe
+    <iframe class="googleMap"
   width="100%"
   height="30vh"
-  style="border:0"
+  style="border:0; display:flex; justify-content: center; align-content: center; align-items: center;"
   loading="lazy"
   allowfullscreen
   referrerpolicy="no-referrer-when-downgrade"
-  src="https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyAPhjvuG5MJ4g2SWvy8bs_Jr4Wb2IslBvo">
+  src="https://www.googleapis.com/geolocation/embed/v1/geolocate?key=AIzaSyAPhjvuG5MJ4g2SWvy8bs_Jr4Wb2IslBvo">
 </iframe>
 
     <button @click=""><a href="tel:1777"> 177</a></button>
-  </div>
+  </div>                                           
 
   <div class="panic">
     <div class="panic-button-container">
