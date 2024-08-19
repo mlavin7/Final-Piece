@@ -70,7 +70,7 @@ export default {
     <iframe width="350" height="250" frameborder="0"
       style=" display:flex; justify-content: center; align-content: center; align-items: center; border-radius: 15px; border-spacing: 10px; border: 5px solid white; padding- "
       referrerpolicy="no-referrer-when-downgrade"
-      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBDpmcltvE_g4XJNXj_Rk0YVqydurt6T2w&q=my+position&zoom=20"
+      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBDpmcltvE_g4XJNXj_Rk0YVqydurt6T2w&q=my+location&zoom=20"
       allowfullscreen>
     </iframe>
 

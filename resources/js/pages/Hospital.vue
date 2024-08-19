@@ -1,4 +1,4 @@
-<script setup>
+<script >
 import PanicButton from '../components/PanicButton.vue';
 import Hospital from '../components/HospitalList.vue';
 import { RouterLink } from 'vue-router';
