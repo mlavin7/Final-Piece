@@ -3,8 +3,6 @@ import { ref } from 'vue';
 import Sound from '../sound/alarm.wav';
 import { usePanicStore } from '../stores/PanicStore';
 
-
-
 // https://www.npmjs.com/package/vue3-touch-events
 
 
