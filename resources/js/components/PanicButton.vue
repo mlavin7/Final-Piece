@@ -2,24 +2,15 @@
 import { ref } from 'vue';
 import Sound from '../sound/alarm.wav';
 import { usePanicStore } from '../stores/PanicStore';
+// https://www.npmjs.com/packa/vue3-touch-events
 
 
 
-
-
-
-// https://www.npmjs.com/package/vue3-touch-events
-
-
-const { activateAlarm, deactivateAlarm } = usePanicStore();
+const { activateAlarm, deactivateAlarm } = usePanicStore()
 
 export default {
 
-
-
   name: 'PanicButton',
-
-  
   setup(props) {
     const pressing = ref(false);
     const pressTimer = ref(null);
@@ -29,16 +20,14 @@ export default {
     const startPress = () => {
       if (!alarmAudio) {
         alarmAudio = new Audio(Sound);
+        pressing.value = true;
+        alarmAudio.loop = true;
+        pressTimer.value = setTimeout(() => {
+          alarmAudio.play().catch(e => console.error("Error playing the sound:", e));
+          showPopup.value = true;
+          activateAlarm();
+        }, 3000);
       }
-      pressing.value = true;
-      alarmAudio.loop = true;
-
-      pressTimer.value = setTimeout(() => {
-        alarmAudio.play().catch(e => console.error("Error playing the sound:", e));
-        showPopup.value = true;
-
-        activateAlarm();
-      }, 3000);
     };
 
     const stopPress = () => {
@@ -75,24 +64,19 @@ export default {
   <!-- Your template content here -->
 
   <div v-if="showPopup" class="googleMap">
-  
-    <iframe class="googleMap"
-  width="100%"
-  height="20vh"
-  style="border:0; display:flex; justify-content: center; align-content: center; align-items: center;"
-  loading="lazy"
-  allowfullscreen
-  referrerpolicy="no-referrer-when-downgrade"
-  src="hhttps://www.google.com/maps/embed/v1/place?key=AIzaSyBDpmcltvE_g4XJNXj_Rk0YVqydurt6T2w&q=my+lolcation">
-</iframe>
+
+    <iframe class="googleMap" width="100%" height="20vh"
+      style="border:0; display:flex; justify-content: center; align-content: center; align-items: center;"
+      loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
+      src="hhttps://www.google.com/maps/embed/v1/place?key=AIzaSyBDpmcltvE_g4XJNXj_Rk0YVqydurt6T2w&q=my+lolcation">
+    </iframe>
 
     <button @click=""><a href="tel:1777"> 177</a></button>
-  </div>                                           
+  </div>
 
   <div class="panic">
     <div class="panic-button-container">
       <button @touchstart="startPress()" @touchend="stopPress()" @touchcancel="stopPress()" @click="muteAlarm()"
-      
         class="panic-button" :class="{ active: pressing }">
         <span v-if="!showPopup"> {{ $t('PANIC!') }} <br>
           <p> {{ $t("PRESS FOR 3 SECOND TO ACTIVATE") }} </p>
@@ -104,7 +88,7 @@ export default {
 
 
 
-     
+
       <div v-if="showPopup" class="popup">
         <button @click="unmuteAlarm">Unmute</button>
       </div>
@@ -128,17 +112,8 @@ span {
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  align-items: center;
-  justify-items: center;
-  justify-content: center;
-  justify-items: center;
-  font-size: 50px;
-  font-weight: bolder;
-  color: white;
-  text-align: center;
-  height: 190px;
-  width: 350px;
-}
+  align-items: center;}
+
 
 .panic-button-container {
   display: flex;
@@ -146,7 +121,6 @@ span {
   align-items: center;
   justify-items: center;
   justify-content: center;
-
   height: 100%;
   height: 190px;
   width: 350px;
@@ -177,6 +151,7 @@ p {
 
 
 }
+
 .panic-button.active {
   animation: blink 1s linear infinite;
 }
@@ -223,7 +198,7 @@ button a {
   height: 100%;
   width: 350px;
   margin-top: 10px;
-  
+
   border-radius: 15px;
   border: 2px solid black;
 
