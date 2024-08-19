@@ -1,16 +1,16 @@
 {
   "_PanicButton-!~{008}~.js": {
-    "file": "assets/PanicButton-DD3U6psK.css",
+    "file": "assets/PanicButton-C7zZex3e.css",
     "src": "_PanicButton-!~{008}~.js"
   },
-  "_PanicButton-DcqXjxeQ.js": {
-    "file": "assets/PanicButton-DcqXjxeQ.js",
+  "_PanicButton-C4IgMBrA.js": {
+    "file": "assets/PanicButton-C4IgMBrA.js",
     "name": "PanicButton",
     "imports": [
       "resources/js/app.js"
     ],
     "css": [
-      "assets/PanicButton-DD3U6psK.css"
+      "assets/PanicButton-C7zZex3e.css"
     ],
     "assets": [
       "assets/alarm--rDo3Mqy.wav"
@@ -42,7 +42,7 @@
     "isEntry": true
   },
   "resources/js/app.js": {
-    "file": "assets/app-Cavx3ZMY.js",
+    "file": "assets/app-DIYHnVUm.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
@@ -58,13 +58,13 @@
     ]
   },
   "resources/js/pages/Emergencies.vue": {
-    "file": "assets/Emergencies-7ERA-_vv.js",
+    "file": "assets/Emergencies-B-12di-Z.js",
     "name": "Emergencies",
     "src": "resources/js/pages/Emergencies.vue",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.js",
-      "_PanicButton-DcqXjxeQ.js",
+      "_PanicButton-C4IgMBrA.js",
       "_i18next-CIEwNdMy.js"
     ],
     "css": [
@@ -72,13 +72,13 @@
     ]
   },
   "resources/js/pages/Haven.vue": {
-    "file": "assets/Haven-DZe5hyvE.js",
+    "file": "assets/Haven-BqJsgXXm.js",
     "name": "Haven",
     "src": "resources/js/pages/Haven.vue",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.js",
-      "_PanicButton-DcqXjxeQ.js",
+      "_PanicButton-C4IgMBrA.js",
       "_i18next-CIEwNdMy.js"
     ],
     "css": [
@@ -86,13 +86,13 @@
     ]
   },
   "resources/js/pages/Home.vue": {
-    "file": "assets/Home-Iks2-s9j.js",
+    "file": "assets/Home-DeQwBX-0.js",
     "name": "Home",
     "src": "resources/js/pages/Home.vue",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.js",
-      "_PanicButton-DcqXjxeQ.js"
+      "_PanicButton-C4IgMBrA.js"
     ],
     "css": [
       "assets/Home-kpFXENfu.css"
@@ -105,12 +105,12 @@
     ]
   },
   "resources/js/pages/Hospital.vue": {
-    "file": "assets/Hospital-BjVxlTBY.js",
+    "file": "assets/Hospital-Zj3GkgsC.js",
     "name": "Hospital",
     "src": "resources/js/pages/Hospital.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_PanicButton-DcqXjxeQ.js",
+      "_PanicButton-C4IgMBrA.js",
       "resources/js/app.js",
       "_i18next-CIEwNdMy.js"
     ],
@@ -119,12 +119,12 @@
     ]
   },
   "resources/js/pages/Mental.vue": {
-    "file": "assets/Mental-keBDs74V.js",
+    "file": "assets/Mental-ubjDObbP.js",
     "name": "Mental",
     "src": "resources/js/pages/Mental.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_PanicButton-DcqXjxeQ.js",
+      "_PanicButton-C4IgMBrA.js",
       "resources/js/app.js",
       "_i18next-CIEwNdMy.js"
     ],
