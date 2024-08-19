@@ -4,7 +4,10 @@ import PanicButton from '../components/PanicButton.vue';
 import Mental from '../components/MentalHospitalList.vue';
 import i18next from 'i18next';
 import { usePanicStore } from '../stores/PanicStore.js';
-import { storeToRefs } from 'pinia';
+import { storeToRefs, getActivePinia } from 'pinia';
+
+
+
 
 const { isAlarmActive} = storeToRefs(usePanicStore());
 
@@ -16,8 +19,8 @@ const t = i18next.t.bind(i18next);
 
 
 
-</script>
 
+</script>
 
 
 <template>
@@ -31,7 +34,7 @@ const t = i18next.t.bind(i18next);
 
         <div   class="header">
             <router-link :to="{ name: 'start' }">
-                <button class="backButton"  onclick="">{{ $t("Back") }}</button>
+                <button class="backButton"  onclick="getActivePinia()._s.forEach(store => store.$reset())">{{ $t("Back") }}</button>
             </router-link>
            <h1  v-if="isAlarmActive == true" class="title">{{ $t('Panic Button') }}</h1>
             <h1 v-else class="title">{{ $t('Mental Crisis') }}</h1> 

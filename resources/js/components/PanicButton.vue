@@ -3,26 +3,21 @@ import { ref } from 'vue';
 import Sound from '../sound/alarm.wav';
 import { usePanicStore } from '../stores/PanicStore';
 
-import { GoogleMap, Marker } from "vue3-google-map";
+
 
 
 // https://www.npmjs.com/package/vue3-touch-events
 
-const YOUR_GOOGLE_MAPS_API_KEY = "AIzaSyBDpmcltvE_g4XJNXj_Rk0YVqydurt6T2w";
+
 const { activateAlarm, deactivateAlarm } = usePanicStore();
 
 export default {
 
-  name: "App",
-  components: { GoogleMap, Marker },
-  data() {
-    const center = { lat: 40.689247, lng: -111.044502 };
-    return { center, YOUR_GOOGLE_MAPS_API_KEY };
-  },
+
 
   name: 'PanicButton',
 
-
+  
   setup(props) {
     const pressing = ref(false);
     const pressTimer = ref(null);
@@ -76,15 +71,16 @@ export default {
 </script>
 <template>
   <div v-if="showPopup"   class="googleMap">
-    <GoogleMap
-    :api-key="YOUR_GOOGLE_MAPS_API_KEY"
-    style="width: 650%; height: 500px"
-    :center="center"
-    :zoom="15"
-  >
-    <Marker :options="{ position: center }" />
-  </GoogleMap>
-
+  
+    <iframe
+  width="650"
+  height="450"
+  style="border:0"
+  loading="lazy"
+  allowfullscreen
+  referrerpolicy="no-referrer-when-downgrade"
+  src="https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyAPhjvuG5MJ4g2SWvy8bs_Jr4Wb2IslBvo">
+</iframe>
     <button @click=""><a href="tel:1777"> 177</a></button>
   </div>
 
@@ -116,10 +112,6 @@ export default {
 <style scoped>
 @import "../../css/app.css";
 
-#map {
-    height: 400px; /* The height is 400 pixels */
-    width: 650px; /* The width is the width of the web page */
-}
 
 .panic {
   width: 350px;
