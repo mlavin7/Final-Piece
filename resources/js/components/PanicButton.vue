@@ -168,8 +168,16 @@ p {
   background-color: #ff0000;
   height: 190px;
   width: 350px;
+  border-radius: 15px;
+  font-weight: bolder;
+  text-align: center;
+  transition: background-color 0.5s;
+  margin-top: 30px;
 
 
+}
+.panic-button.active {
+  animation: blink 1s linear infinite;
 }
 
 button {
