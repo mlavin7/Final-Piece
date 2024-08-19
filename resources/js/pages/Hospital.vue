@@ -1,4 +1,4 @@
-<script >
+<script setup>
 import PanicButton from '../components/PanicButton.vue';
 import Hospital from '../components/HospitalList.vue';
 import { RouterLink } from 'vue-router';
@@ -23,14 +23,19 @@ const t = i18next.t.bind(i18next);
 
     <body>
 
-        <div  class="header">
+        <div v-if="isAlarmActive == false" class="header">
             <router-link :to="{ name: 'start' }">
-                <button class="backButton"  >{{ $t("Back") }}</button>
+                <button class="backButton">{{ $t("Back") }}</button>
             </router-link>
-            <h1  v-if="isAlarmActive == true" class="title">{{ $t('Panic Button') }}</h1>
-            <h1 v-else class="title">{{ $t('Medical Crisis') }}</h1>
+            <h1 class="title">{{ $t('Medical Crisis') }}</h1>
         </div>
-        
+        <div v-if="isAlarmActive == true" class="header">
+            <router-link :to="{ name: 'start' }">
+                <button class="backButton">{{ $t('Back') }}</button>
+            </router-link>
+
+            <h1 class="title">{{ $t('Panic Button') }}</h1>
+        </div>
 
 
         <di v-if="isAlarmActive == false">
