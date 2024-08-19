@@ -167,10 +167,7 @@ p {
   color: white;
   background-color: #ff0000;
   height: 190px;
-  width: 350px;#map {
-    height: 400px; /* The height is 400 pixels */
-    width: 100%; /* The width is the width of the web page */
-}
+  width: 350px;
 
 
 }
