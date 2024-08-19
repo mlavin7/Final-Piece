@@ -72,7 +72,7 @@ export default {
       allowfullscreen>
     </iframe>
 
-    <button @click=""><a href="te.:1777"> 177</a></button>
+    <button @click=""><a href="tel:1777"> 177</a></button>
   </div>
 
   <div class="panic">
