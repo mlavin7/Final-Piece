@@ -25,7 +25,7 @@ const t = i18next.t.bind(i18next);
 
         <div  class="header">
             <router-link :to="{ name: 'start' }">
-                <button class="backButton"  onclick="getActivePinia()._s.forEach(store => store.$reset())">{{ $t("Back") }}</button>
+                <button class="backButton"  >{{ $t("Back") }}</button>
             </router-link>
             <h1  v-if="isAlarmActive == true" class="title">{{ $t('Panic Button') }}</h1>
             <h1 v-else class="title">{{ $t('Medical Crisis') }}</h1>

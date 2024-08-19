@@ -81,7 +81,7 @@ export default {
   loading="lazy"
   allowfullscreen
   referrerpolicy="no-referrer-when-downgrade"
-  src="hhttps://www.google.com/maps/embed/v1/place?key=eIzaSyAPhjvuG5MJ4g2SWvy8bs_Jr4Wb2IslBvo&q=my+geolocation">
+  src="hhttps://www.google.com/maps/embed/v1/place?key=AIzaSyBDpmcltvE_g4XJNXj_Rk0YVqydurt6T2w&q=my+geolocation">
 </iframe>
 
     <button @click=""><a href="tel:1777"> 177</a></button>
