@@ -76,12 +76,12 @@ export default {
   
     <iframe class="googleMap"
   width="100%"
-  height="30vh"
+  height="20vh"
   style="border:0; display:flex; justify-content: center; align-content: center; align-items: center;"
   loading="lazy"
   allowfullscreen
   referrerpolicy="no-referrer-when-downgrade"
-  src="https://www.googleapis.com/geolocation/embed/v1/geolocate?key=AIzaSyAPhjvuG5MJ4g2SWvy8bs_Jr4Wb2IslBvo">
+  src="hhttps://www.google.com/maps/embed/v1/place?key=eIzaSyAPhjvuG5MJ4g2SWvy8bs_Jr4Wb2IslBvo&q=my+geolocation">
 </iframe>
 
     <button @click=""><a href="tel:1777"> 177</a></button>
@@ -89,7 +89,7 @@ export default {
 
   <div class="panic">
     <div class="panic-button-container">
-      <button @touchstart="startPress()" @touchend="stopPress()" @touchcancel="stopPress()" @touch="muteAlarm()"
+      <button @touchstart="startPress()" @touchend="stopPress()" @touchcancel="stopPress()" @click="muteAlarm()"
       
         class="panic-button" :class="{ active: pressing }">
         <span v-if="!showPopup"> {{ $t('PANIC!') }} <br>
@@ -221,8 +221,8 @@ button a {
   justify-content: center;
   height: 100%;
   width: 350px;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 10px;
+  
   border-radius: 15px;
   border: 2px solid black;
 
