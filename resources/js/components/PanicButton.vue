@@ -3,14 +3,23 @@ import { ref } from 'vue';
 import Sound from '../sound/alarm.wav';
 import { usePanicStore } from '../stores/PanicStore';
 
+import { GoogleMap, Marker } from "vue3-google-map";
 
 
 // https://www.npmjs.com/package/vue3-touch-events
 
-
+const YOUR_GOOGLE_MAPS_API_KEY = "AIzaSyBDpmcltvE_g4XJNXj_Rk0YVqydurt6T2w";
 const { activateAlarm, deactivateAlarm } = usePanicStore();
 
 export default {
+
+  name: "App",
+  components: { GoogleMap, Marker },
+  data() {
+    const center = { lat: 40.689247, lng: -111.044502 };
+    return { center, YOUR_GOOGLE_MAPS_API_KEY };
+  },
+
   name: 'PanicButton',
 
 
@@ -66,15 +75,17 @@ export default {
 };
 </script>
 <template>
-  <div v-if="showPopup" class="GoogleMap">
-    <iframe width="350" height="250" frameborder="0"
-      style=" display:flex; justify-content: center; align-content: center; align-items: center; border-radius: 15px; border-spacing: 10px; border: 5px solid white; padding- "
-      referrerpolicy="no-referrer-when-downgrade"
-      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBDpmcltvE_g4XJNXj_Rk0YVqydurt6T2w&q=my+location&zoom=20"
-      allowfullscreen>
-    </iframe>
+  <div v-if="showPopup"   class="googleMap">
+    <GoogleMap
+    :api-key="YOUR_GOOGLE_MAPS_API_KEY"
+    style="width: 650%; height: 500px"
+    :center="center"
+    :zoom="15"
+  >
+    <Marker :options="{ position: center }" />
+  </GoogleMap>
 
-    <button @click=""><a href="te.:1777"> 177</a></button>
+    <button @click=""><a href="tel:1777"> 177</a></button>
   </div>
 
   <div class="panic">
@@ -104,6 +115,11 @@ export default {
 
 <style scoped>
 @import "../../css/app.css";
+
+#map {
+    height: 400px; /* The height is 400 pixels */
+    width: 650px; /* The width is the width of the web page */
+}
 
 .panic {
   width: 350px;
@@ -156,16 +172,10 @@ p {
   color: white;
   background-color: #ff0000;
   height: 190px;
-  width: 350px;
-  border-radius: 10px;
-  font-size: 50px;
-  font-weight: bold;
-  margin-top: 20px;
-
+  width: 350px;#map {
+    height: 400px; /* The height is 400 pixels */
+    width: 100%; /* The width is the width of the web page */
 }
-
-.panic-button.active {
-  animation: blink 1s linear infinite;
 
 
 }
