@@ -6,6 +6,8 @@ import { usePanicStore } from '../stores/PanicStore';
 
 
 
+
+
 // https://www.npmjs.com/package/vue3-touch-events
 
 
@@ -81,7 +83,7 @@ export default {
   loading="lazy"
   allowfullscreen
   referrerpolicy="no-referrer-when-downgrade"
-  src="hhttps://www.google.com/maps/embed/v1/place?key=AIzaSyBDpmcltvE_g4XJNXj_Rk0YVqydurt6T2w&q=my+geolocation">
+  src="hhttps://www.google.com/maps/embed/v1/place?key=AIzaSyBDpmcltvE_g4XJNXj_Rk0YVqydurt6T2w&q=my+lolcation">
 </iframe>
 
     <button @click=""><a href="tel:1777"> 177</a></button>
@@ -98,12 +100,11 @@ export default {
         <span v-else> {{ $t('PANIC!') }} <br>
           <p> {{ $t("PRESS TWICE FOR DEACTIVATE") }} </p>
         </span>
-
-
-
-
-
       </button>
+
+
+
+     
       <div v-if="showPopup" class="popup">
         <button @click="unmuteAlarm">Unmute</button>
       </div>

@@ -10,7 +10,7 @@ const { t } = useI18n();
 
 
 onMounted(() => {
-    phoneList = document.getElementById('phoneList');
+   phoneList = document.getElementById('phoneList');
     mapList = document.getElementById('mapList');
 });
 
