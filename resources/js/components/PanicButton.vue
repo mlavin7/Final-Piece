@@ -70,23 +70,26 @@ export default {
 };
 </script>
 <template>
-  <div v-if="showPopup"   class="googleMap">
+  <!-- Your template content here -->
+
+  <div v-if="showPopup" class="googleMap">
   
     <iframe
-  width="650"
-  height="450"
+  width="100%"
+  height="30vh"
   style="border:0"
   loading="lazy"
   allowfullscreen
   referrerpolicy="no-referrer-when-downgrade"
   src="https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyAPhjvuG5MJ4g2SWvy8bs_Jr4Wb2IslBvo">
 </iframe>
+
     <button @click=""><a href="tel:1777"> 177</a></button>
   </div>
 
   <div class="panic">
     <div class="panic-button-container">
-      <button @touchstart="startPress()" @touchend="stopPress()" @touchcancel="stopPress()" @click="muteAlarm()"
+      <button @touchstart="startPress()" @touchend="stopPress()" @touchcancel="stopPress()" @touch="muteAlarm()"
       
         class="panic-button" :class="{ active: pressing }">
         <span v-if="!showPopup"> {{ $t('PANIC!') }} <br>
