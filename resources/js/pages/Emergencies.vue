@@ -13,9 +13,6 @@ console.log("panic", isAlarmActive);
 console.log("reAD");
 
 const t = i18next.t.bind(i18next);
-
-
-
 </script>
 
 
