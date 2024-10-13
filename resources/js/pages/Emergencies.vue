@@ -5,6 +5,7 @@ import i18next from 'i18next';
 import { RouterLink } from 'vue-router';
 import { usePanicStore } from '../stores/PanicStore.js';
 import { storeToRefs } from 'pinia';
+import { ref } from 'vue';
 
 const { isAlarmActive} = storeToRefs(usePanicStore());
 
@@ -13,6 +14,35 @@ console.log("panic", isAlarmActive);
 console.log("reAD");
 
 const t = i18next.t.bind(i18next);
+
+
+// Add this code inside the <script setup> tag
+
+
+const redirectTimeout = 3000; // 3 seconds
+
+const handleAnchorClick = (event) => {
+    event.preventDefault();
+    const anchorElement = event.target;
+    setTimeout(() => {
+        window.location.href = anchorElement.href;
+    }, redirectTimeout);
+};
+
+const anchors = ref([]);
+
+// Add this code inside the mounted() lifecycle hook or onMounted() function
+anchors.value = document.getElementsByClassName('anchor');
+for (const anchor of anchors.value) {
+    anchor.addEventListener('click', handleAnchorClick);
+}
+
+// Add this code inside the beforeUnmount() lifecycle hook or onBeforeUnmount() function
+for (const anchor of anchors.value) {
+    anchor.removeEventListener('click', handleAnchorClick);
+}
+
+
 </script>
 
 
