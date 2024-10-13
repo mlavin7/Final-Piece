@@ -1,85 +1,80 @@
 <script setup>
 
-import PanicButton from '../components/PanicButton.vue';
-import i18next from 'i18next';
-import { RouterLink } from 'vue-router';
-import { usePanicStore } from '../stores/PanicStore.js';
-import { storeToRefs } from 'pinia';
 import { ref } from 'vue';
 
-const { isAlarmActive} = storeToRefs(usePanicStore());
+const holdTimer = ref(null);
 
-
-console.log("panic", isAlarmActive);
-console.log("reAD");
-
-const t = i18next.t.bind(i18next);
-
-
-// Add this code inside the <script setup> tag
-
-
-const redirectTimeout = 3000; // 3 seconds
-
-const handleAnchorClick = (event) => {
-    event.preventDefault();
-    const anchorElement = event.target;
-    setTimeout(() => {
-        window.location.href = anchorElement.href;
-    }, redirectTimeout);
+const activateAnchor = () => {
+    // Your logic to activate the anchor goes here
+    console.log('Anchor activated!');
 };
 
-const anchors = ref([]);
+const startHoldTimer = () => {
 
-// Add this code inside the mounted() lifecycle hook or onMounted() function
-anchors.value = document.getElementsByClassName('anchor');
-for (const anchor of anchors.value) {
-    anchor.addEventListener('click', handleAnchorClick);
-}
+    holdTimer.value = setTimeout(() => {
+        activateAnchor();
+    }, 3000);
+};
 
-// Add this code inside the beforeUnmount() lifecycle hook or onBeforeUnmount() function
-for (const anchor of anchors.value) {
-    anchor.removeEventListener('click', handleAnchorClick);
-}
 
+
+const cancelHoldTimer = () => {
+    clearTimeout(holdTimer.value);
+};
 
 </script>
 
 
 
+
 <template>
-    <header>
-        
-    
+    <!-- Your existing template code -->
+
+    <div v-if="isAlarmActive == false">
+        <ul>
+            <li class="buttoncont">
+                <a class="anchor" href="tel:1444"
+                    @mousedown="startHoldTimer"
+                    @mouseup="cancelHoldTimer"
+                    @mouseleave="cancelHoldTimer"
+                >
+                    {{ $t("Ambulance: 144") }}
+                </a>
+            </li>
+            <li class="buttoncont">
+                <a class="anchor" href="tel:1177"
+                    @mousedown="startHoldTimer"
+                    @mouseup="cancelHoldTimer"
+                    @mouseleave="cancelHoldTimer"
+                >
+                    {{ $t("Police: 117") }}
+                </a>
+            </li>
+            <li class="buttoncont">
+                <a class="anchor" href="tel:1188"
+                    @mousedown="startHoldTimer"
+                    @mouseup="cancelHoldTimer"
+                    @mouseleave="cancelHoldTimer"
+                >
+                    {{ $t("Fire service: 118") }}
+                </a>
+            </li>
+            <li class="buttoncont">
+                <a class="anchor" href="tel:1455"
+                    @mousedown="startHoldTimer"
+                    @mouseup="cancelHoldTimer"
+                    @mouseleave="cancelHoldTimer"
+                >
+                    {{ $t("Tox-Center: 145") }}
+                </a>
+            </li>
+        </ul>
+    </div>
 
 
-        <div  class="header">
-            <router-link :to="{ name: 'start' }">
-                <button class="backButton"  >{{ $t("Back") }}</button>
-            </router-link>
-            <h1  v-if="isAlarmActive == true" class="title">{{ $t('Panic Button') }}</h1>
-            <h1  v-else class="title">{{ $t('Emergency Numbers') }}</h1>
-        </div>
 
-    </header>
-
-    <body>
-
-        <div v-if="isAlarmActive == false" >
-            <ul>
-                <li class="buttoncont"><a class="anchor" href=" tel:1444">{{ $t("Ambulance: 144") }}</a></li>
-                <li class="buttoncont"><a class="anchor" href="tel:1177">{{ $t("Police: 117") }}</a></li>
-                <li class="buttoncont"><a class="anchor" href=" tel:1188"> {{ $t("Fire service: 118") }}</a></li>
-                <li class="buttoncont"><a class="anchor" href=" tel:1455">{{ $t("Tox-Center: 145") }}</a></li>
-
-            </ul>
-
-            <!-- Your HTML content goes here -->
-        </div>
-        <PanicButton />
-
-    </body>
-</template>
+    <!-- Your existing template code -->
+</template>te>
 
 
 
